@@ -29,7 +29,7 @@ export const HeroIconSecond = () => {
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 1360 336"
-      class="intro_translate__ON8Do intro_mobile__zRl_i"
+      class="HeroImage2"
     >
       <g fill="#ff98a2">
         <path

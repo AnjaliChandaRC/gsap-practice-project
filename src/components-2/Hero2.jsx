@@ -9,33 +9,20 @@ const Hero2 = () => {
     toggleActions: "play complete none reverse",
   });
   useLayoutEffect(() => {
-    let icons = gsap.matchMedia();
-    icons.add("(max-width:767.98px)", () => {
-      let revenue = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".iconsbar_parent",
-          start: "top 30%",
-          end: "bottom center",
-          scrub: 3,
-          pin: true,
-        },
-      });
-      revenue.fromTo(
-        ".icons_img",
-        {
-          xPercent: 0,
-        },
-        {
-          xPercent: -120,
-        }
-      );
-      // },
+    gsap.to(".mainBg #bg2", {
+      top: 0,
+      duration: 1,
+      delay: 1,
     });
-  }, []);
+  });
   return (
-    <div>
-      <div class="home_title__U0Uwb bg-black">
-        <HeroIcon />
+    <div className=" relative mainBg overflow-hidden">
+      <div className="heroImage relative bg-[#ff98a2] min-h-screen ">
+        <span className="relative z-10 " id="image1">
+          <HeroIcon />
+        </span>
+      </div>
+      <div id="bg2" className="  absolute min-h-screen bg-black w-full">
         <HeroIconSecond />
       </div>
     </div>
