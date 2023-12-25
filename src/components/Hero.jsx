@@ -1,7 +1,7 @@
 import React, { useLayoutEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-
+import { HeroIcon, HeroIconSecond } from "../common/Icons";
 const Hero = () => {
   gsap.registerPlugin(ScrollTrigger);
   ScrollTrigger.defaults({
@@ -29,10 +29,18 @@ const Hero = () => {
           xPercent: -120,
         }
       );
-      // },
     });
   }, []);
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <>
+      <div className="bg[#ff98a2]">
+        <div>
+          <HeroIcon />
+          <HeroIconSecond />
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default Hero;
